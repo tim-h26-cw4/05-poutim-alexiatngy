@@ -21,7 +21,15 @@ export default class Poutine{
             const btnPoutine = this.types[i];
             btnPoutine.classList.remove('is-active');
             event.currentTarget.classList.add('is-active')
+            this.selectedType = event.currentTarget.innerText;
+            updatePhoto();
         }
+    }
+
+    updatePhoto(){
+        const photo = this.element.getElementById('img');
+        photo.classList.add('is-active');
+        photo.src = `assets/images/${this.selectedType}.png`;
     }
 }
 
