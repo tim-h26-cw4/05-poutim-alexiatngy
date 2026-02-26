@@ -5,20 +5,26 @@ export default class Chef{
     constructor(element){ 
         this.element = element;
         this.menu = [];
-        this.container = document.querySelector('.chef__order');
+        this.container = this.element.querySelector('.chef__order');
         this.init();
        
     }
 
     init(){
         Icons.load();
-        const poutines = document.querySelectorAll('.poutine');
+        const poutines = this.element.querySelectorAll('.poutine');
         for (let i = 0; i < poutines.length; i++) {
             const poutine = poutines[i];
             const instance = new Poutine(poutine);
             this.menu.push(instance);
             console.log(this.menu);
         }
+        const btnPassezLaCommande = this.element.querySelector('.button-secondary');
+        btnPassezLaCommande.addEventListener('click', this.sendOrder.bind(this));
+    }
+
+    sendOrder(){
+        
     }
 }
 

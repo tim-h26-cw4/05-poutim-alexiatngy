@@ -1,8 +1,10 @@
 import Icons from "./utils/Icons.js";
 
-// La ligne suivante devrait être au TOUT début du init() du Main
 export default class Poutine{
     constructor(){
+        this.element = this.element;
+        this.types = this.element.querySelectorAll('.button');
+        this.selectedType = '';
         this.init();
     }
 
