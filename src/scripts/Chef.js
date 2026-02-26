@@ -1,3 +1,4 @@
+import Poutine from './Poutine.js'; 
 import Icons from "./utils/Icons.js";
 
 export default class Chef{
@@ -14,7 +15,8 @@ export default class Chef{
         const poutines = document.querySelectorAll('.poutine');
         for (let i = 0; i < poutines.length; i++) {
             const poutine = poutines[i];
-            this.menu.push(poutine);
+            const instance = new Poutine(poutine);
+            this.menu.push(instance);
             console.log(this.menu);
         }
     }
