@@ -24,7 +24,9 @@ export default class Chef{
     }
 
     sendOrder(){
-        
+         const nbPoutines = document.createElement("p");
+         nbPoutines.innerText = `Nombre total de poutine(s) : ${nbPoutinesTotal}`;
+         this.container.appendChild(nbPoutines);
     }
 }
 
