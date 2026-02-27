@@ -1,0 +1,5 @@
+Question : sélectionner une image de notre current target en javascript
+https://developer.mozilla.org/fr/docs/Web/API/Event/currentTarget
+
+Question : Sélectionner une image d’élément html en javascript
+https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById#:~:text=The%20getElementById()%20method%20of,html%20Copy%20Play
