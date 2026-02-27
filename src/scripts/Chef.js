@@ -29,13 +29,19 @@ export default class Chef{
 
         for (let i = 0; i < this.menu.length; i++) {
             const poutine = this.menu[i];
+            console.log(poutine.isActive);
+
             if(poutine.isActive){
-                nbPoutinesTotal ++;
-                const nbPoutines = document.createElement("p");
-                nbPoutines.innerText = `Nombre total de poutine(s) : ${nbPoutinesTotal}`;
-                this.container.appendChild(nbPoutines);
+                this.nbPoutinesTotal ++; 
+            }  
+
+            if (this.nbPoutinesTotal > 3) {
+                this.nbPoutinesTotal = 3;
             }
         }
+                const nbPoutines = document.createElement("p");
+                nbPoutines.innerText = `Nombre total de poutine(s) : ${this.nbPoutinesTotal}`;
+                this.container.appendChild(nbPoutines);
         
     }
 }

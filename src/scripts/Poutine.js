@@ -5,6 +5,7 @@ export default class Poutine{
         this.element = element;
         this.types = this.element.querySelectorAll('.button');
         this.selectedType = '';
+        this.isActive = false; 
         this.init();
     }
 
@@ -17,6 +18,7 @@ export default class Poutine{
     }
 
     selectType(event){
+        this.isActive = true;
           for (let i = 0; i < this.types.length; i++) {
             const btnPoutine = this.types[i];
             btnPoutine.classList.remove('is-active');
